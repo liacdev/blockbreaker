@@ -135,6 +135,7 @@ GameObject:
   - component: {fileID: 83070103}
   - component: {fileID: 83070105}
   - component: {fileID: 83070106}
+  - component: {fileID: 83070107}
   m_Layer: 0
   m_Name: Ball
   m_TagString: Untagged
@@ -202,7 +203,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 83070102}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 5, y: 8, z: 0}
+  m_LocalPosition: {x: 5, y: 0.704, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -246,6 +247,19 @@ CircleCollider2D:
   m_Offset: {x: 0.005, y: 0.009}
   serializedVersion: 2
   m_Radius: 0.21
+--- !u!114 &83070107
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 83070102}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d55c1c64ddbcb810ba995fe43e902986, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  paddle1: {fileID: 2088440349}
 --- !u!1 &223974226
 GameObject:
   m_ObjectHideFlags: 0
