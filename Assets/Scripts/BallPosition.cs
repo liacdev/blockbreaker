@@ -22,7 +22,8 @@ public class BallPosition : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (!hasStarted){
+        if (!hasStarted)
+        {
             LockBallToPaddle();
             LaunchOnMouseClick();
         }
@@ -43,4 +44,10 @@ public class BallPosition : MonoBehaviour
         }
     }
 
+    private void OnCollisionEnter2D(Collision2D collision) {
+        if (hasStarted)
+        {
+            GetComponent<AudioSource>().Play();
+        }
+    }
 }
