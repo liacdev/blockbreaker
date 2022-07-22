@@ -9,7 +9,7 @@ public class Block : MonoBehaviour
     [SerializeField] AudioClip breakSound;
     [SerializeField] float breakSoundVolume = 1f;
     [SerializeField] GameObject blockSparklesVFX;
-    [SerializeField] float particleDestroyDelay = 2f;
+    [SerializeField] float particleDestroyDelay = 1f;
 
     // Cached reference
     Level level;
