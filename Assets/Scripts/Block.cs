@@ -8,6 +8,8 @@ public class Block : MonoBehaviour
     [SerializeField] float blockDestroyDelay = 0.5f;
     [SerializeField] AudioClip breakSound;
     [SerializeField] float breakSoundVolume = 1f;
+    [SerializeField] GameObject blockSparklesVFX;
+    [SerializeField] float particleDestroyDelay = 2f;
 
     // Cached reference
     Level level;
@@ -25,9 +27,24 @@ public class Block : MonoBehaviour
         
     private void DestroyBlock()
     {
-        FindObjectOfType<GameSession>().AddToScore();  
-        AudioSource.PlayClipAtPoint(breakSound, Camera.main.transform.position, breakSoundVolume);
+        PlayBlockDestroySFX();
         Destroy(gameObject, blockDestroyDelay); 
         level.BlockDestroyed();    
+        TriggerSparklesVFX();
     }
+
+    private void PlayBlockDestroySFX()
+    {
+        FindObjectOfType<GameSession>().AddToScore();  
+        AudioSource.PlayClipAtPoint(breakSound, Camera.main.transform.position, breakSoundVolume);
+    }
+
+
+    private void TriggerSparklesVFX()
+    {
+        GameObject sparkles = Instantiate(blockSparklesVFX, transform.position, transform.rotation);   
+        Destroy(sparkles, particleDestroyDelay); 
+    }
+
+
 }

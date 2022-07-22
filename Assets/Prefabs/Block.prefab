@@ -127,3 +127,4 @@ MonoBehaviour:
   blockDestroyDelay: 0
   breakSound: {fileID: 8300000, guid: fdd746c31337885a6acc4dd895dc59fe, type: 3}
   breakSoundVolume: 0.5
+  blockSparklesVFX: {fileID: 100000, guid: 7d846c02296ef4dc4abff04ce3e5262c, type: 3}
